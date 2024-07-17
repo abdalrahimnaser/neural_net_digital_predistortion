@@ -23,7 +23,7 @@ using namespace std;
 
 #include "ap_int.h"
 
-#define SIM_ENV
+//#define SIM_ENV
 
 
 
@@ -33,6 +33,8 @@ using namespace std;
 
 
 
+#define C_FRACT_BITS (13)
+#define SIG_BITS (15)
 
 #ifdef SIM_ENV
 #define BRAM_LEN  (1024)

@@ -141,20 +141,20 @@ reg    ap_idle_pp0;
 wire    ap_block_pp0_stage0_subdone;
 wire   [31:0] params;
 reg   [19:0] buffIdx;
-wire   [0:0] icmp_ln39_fu_120_p2;
-reg   [0:0] icmp_ln39_reg_178;
+wire   [0:0] icmp_ln50_fu_120_p2;
+reg   [0:0] icmp_ln50_reg_178;
 wire    ap_block_pp0_stage0_11001;
-wire   [63:0] zext_ln55_fu_130_p1;
-reg   [63:0] zext_ln55_reg_184;
+wire   [63:0] zext_ln66_fu_130_p1;
+reg   [63:0] zext_ln66_reg_184;
 wire    ap_block_pp0_stage0;
-wire   [19:0] select_ln58_fu_148_p3;
+wire   [19:0] select_ln69_fu_148_p3;
 wire   [31:0] sigReIn_Addr_A_orig;
 wire   [31:0] sigImIn_Addr_A_orig;
 wire   [31:0] sigReOut_Addr_A_orig;
 wire   [31:0] sigImOut_Addr_A_orig;
 wire   [19:0] sigLen_fu_116_p1;
-wire   [0:0] icmp_ln58_fu_136_p2;
-wire   [19:0] add_ln64_fu_142_p2;
+wire   [0:0] icmp_ln69_fu_136_p2;
+wire   [19:0] add_ln75_fu_142_p2;
 reg   [0:0] ap_NS_fsm;
 reg    ap_idle_pp0_0to0;
 reg    ap_reset_idle_pp0;
@@ -166,8 +166,8 @@ initial begin
 #0 ap_CS_fsm = 1'd1;
 #0 ap_enable_reg_pp0_iter1 = 1'b0;
 #0 buffIdx = 20'd0;
-#0 icmp_ln39_reg_178 = 1'd0;
-#0 zext_ln55_reg_184 = 64'd0;
+#0 icmp_ln50_reg_178 = 1'd0;
+#0 zext_ln66_reg_184 = 64'd0;
 end
 
 nn_act_BUS_A_s_axi #(
@@ -220,46 +220,46 @@ always @ (posedge ap_clk) begin
         buffIdx <= 20'd0;
     end else begin
         if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-            buffIdx <= select_ln58_fu_148_p3;
+            buffIdx <= select_ln69_fu_148_p3;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-        icmp_ln39_reg_178 <= 1'd0;
+        icmp_ln50_reg_178 <= 1'd0;
     end else begin
         if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-            icmp_ln39_reg_178 <= icmp_ln39_fu_120_p2;
+            icmp_ln50_reg_178 <= icmp_ln50_fu_120_p2;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
-                zext_ln55_reg_184[0] <= 1'b0;
-        zext_ln55_reg_184[1] <= 1'b0;
-        zext_ln55_reg_184[2] <= 1'b0;
-        zext_ln55_reg_184[3] <= 1'b0;
-        zext_ln55_reg_184[4] <= 1'b0;
-        zext_ln55_reg_184[5] <= 1'b0;
-        zext_ln55_reg_184[6] <= 1'b0;
-        zext_ln55_reg_184[7] <= 1'b0;
-        zext_ln55_reg_184[8] <= 1'b0;
-        zext_ln55_reg_184[9] <= 1'b0;
-        zext_ln55_reg_184[10] <= 1'b0;
-        zext_ln55_reg_184[11] <= 1'b0;
-        zext_ln55_reg_184[12] <= 1'b0;
-        zext_ln55_reg_184[13] <= 1'b0;
-        zext_ln55_reg_184[14] <= 1'b0;
-        zext_ln55_reg_184[15] <= 1'b0;
-        zext_ln55_reg_184[16] <= 1'b0;
-        zext_ln55_reg_184[17] <= 1'b0;
-        zext_ln55_reg_184[18] <= 1'b0;
-        zext_ln55_reg_184[19] <= 1'b0;
+                zext_ln66_reg_184[0] <= 1'b0;
+        zext_ln66_reg_184[1] <= 1'b0;
+        zext_ln66_reg_184[2] <= 1'b0;
+        zext_ln66_reg_184[3] <= 1'b0;
+        zext_ln66_reg_184[4] <= 1'b0;
+        zext_ln66_reg_184[5] <= 1'b0;
+        zext_ln66_reg_184[6] <= 1'b0;
+        zext_ln66_reg_184[7] <= 1'b0;
+        zext_ln66_reg_184[8] <= 1'b0;
+        zext_ln66_reg_184[9] <= 1'b0;
+        zext_ln66_reg_184[10] <= 1'b0;
+        zext_ln66_reg_184[11] <= 1'b0;
+        zext_ln66_reg_184[12] <= 1'b0;
+        zext_ln66_reg_184[13] <= 1'b0;
+        zext_ln66_reg_184[14] <= 1'b0;
+        zext_ln66_reg_184[15] <= 1'b0;
+        zext_ln66_reg_184[16] <= 1'b0;
+        zext_ln66_reg_184[17] <= 1'b0;
+        zext_ln66_reg_184[18] <= 1'b0;
+        zext_ln66_reg_184[19] <= 1'b0;
     end else begin
         if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-                        zext_ln55_reg_184[19 : 0] <= zext_ln55_fu_130_p1[19 : 0];
+                        zext_ln66_reg_184[19 : 0] <= zext_ln66_fu_130_p1[19 : 0];
         end
     end
 end
@@ -371,7 +371,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln64_fu_142_p2 = (buffIdx + 20'd1);
+assign add_ln75_fu_142_p2 = (buffIdx + 20'd1);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -389,15 +389,15 @@ always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign icmp_ln39_fu_120_p2 = ((sigLen_fu_116_p1 == 20'd0) ? 1'b1 : 1'b0);
+assign icmp_ln50_fu_120_p2 = ((sigLen_fu_116_p1 == 20'd0) ? 1'b1 : 1'b0);
 
-assign icmp_ln58_fu_136_p2 = ((buffIdx == sigLen_fu_116_p1) ? 1'b1 : 1'b0);
+assign icmp_ln69_fu_136_p2 = ((buffIdx == sigLen_fu_116_p1) ? 1'b1 : 1'b0);
 
-assign select_ln58_fu_148_p3 = ((icmp_ln58_fu_136_p2[0:0] == 1'b1) ? 20'd0 : add_ln64_fu_142_p2);
+assign select_ln69_fu_148_p3 = ((icmp_ln69_fu_136_p2[0:0] == 1'b1) ? 20'd0 : add_ln75_fu_142_p2);
 
 assign sigImIn_Addr_A = sigImIn_Addr_A_orig << 32'd4;
 
-assign sigImIn_Addr_A_orig = zext_ln55_fu_130_p1;
+assign sigImIn_Addr_A_orig = zext_ln66_fu_130_p1;
 
 assign sigImIn_Clk_A = ap_clk;
 
@@ -409,11 +409,11 @@ assign sigImIn_WEN_A = 16'd0;
 
 assign sigImOut_Addr_A = sigImOut_Addr_A_orig << 32'd4;
 
-assign sigImOut_Addr_A_orig = zext_ln55_reg_184;
+assign sigImOut_Addr_A_orig = zext_ln66_reg_184;
 
 assign sigImOut_Clk_A = ap_clk;
 
-assign sigImOut_Din_A = ((icmp_ln39_reg_178[0:0] == 1'b1) ? 128'd0 : sigImIn_Dout_A);
+assign sigImOut_Din_A = ((icmp_ln50_reg_178[0:0] == 1'b1) ? 128'd0 : sigImIn_Dout_A);
 
 assign sigImOut_Rst_A = ap_rst_n_inv;
 
@@ -421,7 +421,7 @@ assign sigLen_fu_116_p1 = params[19:0];
 
 assign sigReIn_Addr_A = sigReIn_Addr_A_orig << 32'd4;
 
-assign sigReIn_Addr_A_orig = zext_ln55_fu_130_p1;
+assign sigReIn_Addr_A_orig = zext_ln66_fu_130_p1;
 
 assign sigReIn_Clk_A = ap_clk;
 
@@ -433,18 +433,18 @@ assign sigReIn_WEN_A = 16'd0;
 
 assign sigReOut_Addr_A = sigReOut_Addr_A_orig << 32'd4;
 
-assign sigReOut_Addr_A_orig = zext_ln55_reg_184;
+assign sigReOut_Addr_A_orig = zext_ln66_reg_184;
 
 assign sigReOut_Clk_A = ap_clk;
 
-assign sigReOut_Din_A = ((icmp_ln39_reg_178[0:0] == 1'b1) ? 128'd0 : sigReIn_Dout_A);
+assign sigReOut_Din_A = ((icmp_ln50_reg_178[0:0] == 1'b1) ? 128'd0 : sigReIn_Dout_A);
 
 assign sigReOut_Rst_A = ap_rst_n_inv;
 
-assign zext_ln55_fu_130_p1 = buffIdx;
+assign zext_ln66_fu_130_p1 = buffIdx;
 
 always @ (posedge ap_clk) begin
-    zext_ln55_reg_184[63:20] <= 44'b00000000000000000000000000000000000000000000;
+    zext_ln66_reg_184[63:20] <= 44'b00000000000000000000000000000000000000000000;
 end
 
 endmodule //nn_act

@@ -4,6 +4,17 @@
 
 
 
+static void mult_complex(ap_int<32> a, ap_int<32> b, ap_int<32> c, ap_int<32> d,
+		ap_int<32> &res_re, ap_int<32> &res_im)
+{
+	res_re = (((a*c) >> C_FRACT_BITS) - ((b*d) >> C_FRACT_BITS));
+	res_im = (((a*d) >> C_FRACT_BITS) + ((b*c) >> C_FRACT_BITS));
+}
+
+
+
+
+
 void nn_act(
 		ap_uint<32> params,
 		ap_uint<128> sigReIn[BRAM_LEN],
