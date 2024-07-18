@@ -41,7 +41,7 @@ using namespace std;
 #define BRAM_DIG_OUT_LEN (1024)
 #define BRAM_PAR_LEN (1024)
 #else
-#define BRAM_LEN  (32768)
+#define BRAM_LEN  (8192)
 #define BRAM_DIG_OUT_LEN ((BRAM_LEN*DIG_BITS)/32)
 #define BRAM_PAR_LEN (64)
 #endif

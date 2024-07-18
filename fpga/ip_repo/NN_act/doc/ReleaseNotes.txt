@@ -7,7 +7,7 @@
 # ==============================================================
 
 Family       : zynquplus
-Device       : xczu48dr
-Package      : -ffvg1517
-Speed Grade  : -2-e
+Device       : xck26
+Package      : -sfvc784
+Speed Grade  : -2LV-c
 Clock Period : 5.000 ns
