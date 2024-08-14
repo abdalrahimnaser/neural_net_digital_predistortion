@@ -1,0 +1,7 @@
+notes:
+no. epochs = 700
+no. previous = 4 (incvreasing to 5 doesn't chage much)
+# val_loss ~ 3.42e-8, NMSE=-33.55
+# tf model = tf_model_33_5dB_nprev_4.h5
+
+you may not get it from the first go, do it multiple times till you get to 3.5e-8, i,e you may get stuck at 4e-8 despite nprev>4
