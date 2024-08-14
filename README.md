@@ -10,3 +10,12 @@ from the same matlab script
 - **`hls_fpga_accelerator.cpp`**: This file contains a hardware accelerator implemented in High-Level Synthesis (HLS) C++ and deployed on the Zynq UltraScale+ MPSoC SOM for inference **(achieved 47.2% reduction in inference time compared to the SoC CPU).**
 
 The corresponding driver and PYNQ deployment code will be released soon. For early access, please reach out at [abood151103@gmail.com](mailto:abood151103@gmail.com).
+
+### System Setup
+Note: the upper part is the training setup and the other is for inference
+![setup](./setup.png)
+
+### FPGA Block Diagram
+![fpga bd](./fpga_bd.png)
+
+
